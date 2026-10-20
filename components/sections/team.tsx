@@ -6,7 +6,7 @@ import Reveal from "@/components/reveal";
 // For your own photos: put them in public/team/ and use src: "/team/name.jpg".
 const img = (id: string) => `https://images.unsplash.com/${id}?q=80&w=900&auto=format&fit=crop`;
 const team = [
-  { name: "Manu Mohanan", role: "Founder & Graphic Designer", linkedin: "https://www.linkedin.com/in/username", src:("/Manu_image.jpeg") },
+  { name: "Manu Mohanan", role: "Founder & Graphic Designer", linkedin: "https://www.linkedin.com/in/username", src:("/Manu_Image.jpeg") },
   { name: "Aparna Unni", role: "Web Designer", linkedin: "https://www.linkedin.com/in/username", src:("/Aparna.jpeg") },
   // { name: "Emily Watson", role: "Customer Success Lead", linkedin: "https://www.linkedin.com/in/username", src: img("photo-1623582854588-d60de57fa33f") },
   // { name: "James Kim", role: "Data & Reporting Specialist", linkedin: "https://www.linkedin.com/in/username", src: img("photo-1636041293178-808a6762ab39") },
