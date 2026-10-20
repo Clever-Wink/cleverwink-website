@@ -1,0 +1,11 @@
+/* Append to the app/globals.css that create-next-app / shadcn generated */
+@theme inline {
+  --color-ink: #00052e;
+  --color-signal: #0428cb;
+  --color-arc: #34fcff;
+  --color-fog: #6b6b83;
+  --color-mist: #8185a0;
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-plex);
+}
+html { scroll-behavior: smooth; }
