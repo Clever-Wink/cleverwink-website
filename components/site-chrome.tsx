@@ -10,7 +10,7 @@ const links = [
   ["Contact", "/#contact"],
 ];
 const socials = [
-  { name: "LinkedIn", icon: FaLinkedinIn, href: "https://www.linkedin.com/in/clever-wink-568673445" },
+  { name: "LinkedIn", icon: FaLinkedinIn, href: "https://www.linkedin.com/company/clever-wink-llc" },
   { name: "Instagram", icon: FaInstagram, href: "https://www.instagram.com/cleverwink.ae/" },
   // { name: "Facebook", icon: FaFacebookF, href: "#" },
 ];
