@@ -7,8 +7,8 @@ import Reveal from "@/components/reveal";
 const img = (id: string) => `https://images.unsplash.com/${id}?q=80&w=900&auto=format&fit=crop`;
 const team = [
   { name: "Manu Mohanan", role: "Founder & Art Director", linkedin: "https://www.linkedin.com/in/manu-mohanan-black555", src:("/team/Manu.jpeg") },
-  { name: "Ajesh", role: "Cheif Technology Officer", linkedin: "https://www.linkedin.com/in/username", src:("/team/Ajesh.jpeg")},
-  { name: "Srijith", role: "Project Manager", linkedin: "https://www.linkedin.com/in/username", src:("/team/Srijith.webp") },
+  { name: "Ajesh", role: "Cheif Technology Officer", linkedin: "#", src:("/team/Ajesh.jpeg")},
+  { name: "Srijith", role: "Project Manager", linkedin: "#", src:("/team/Srijith.webp") },
   { name: "Aparna Unni", role: "Software Developer", linkedin: "https://www.linkedin.com/in/aparna-unni-928514225", src:("/team/Aparna.jpeg") },
 ];
 
