@@ -23,7 +23,7 @@ export const services: Service[] = [
     title: "CRM Solutions",
     icon: Database,
     short: "Set up and customise a CRM that fits how your team sells.",
-    image: "/crm.png",
+    image: "/CleverWink CRM Dashboard.png",
     heading: "CRM solutions that keep every lead and customer in one place",
     intro: "We set up, customise and automate your CRM so leads are captured, followed up and tracked without manual work.",
     metaTitle: "CRM Setup & Customisation Services",
@@ -44,7 +44,7 @@ export const services: Service[] = [
     title: "HRMS Solutions",
     icon: Users,
     short: "Manage employees, attendance and leave in one system.",
-    image: "/hrms.webp",
+    image: "/hrms.jpg",
 
     heading: "HRMS that takes the paperwork out of HR",
     intro: "We set up and automate your HR processes, from employee records to leave approvals, so your team spends less time on admin.",

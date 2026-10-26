@@ -32,17 +32,17 @@ const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 const inter = Inter({ subsets: ["latin"], weight: ["300", "400", "500"], variable: "--font-inter" });
 const plex = IBM_Plex_Mono({ subsets: ["latin"], weight: "400", variable: "--font-plex" });
 
-const title = "CLEVER WINK | Software, Websites & Digital Marketing";
+const title = "CLEVER WINK | Business Automation & Digital Marketing UAE";
 const description =
-  "UAE-based team building CRM and HRMS systems, websites and digital marketing, with graphic design and photography to match. Tell us what your business needs.";
-
-export const metadata: Metadata = {
-  metadataBase: new URL("https://cleverwink.ae"),
-  title: { default: title, template: "%s | CLEVER WINK" },
-  description,
-  alternates: { canonical: "/" },
-  openGraph: { type: "website", siteName: "CLEVER WINK", url: "/", title, description, locale: "en_AE" },
-  twitter: { card: "summary_large_image", title, description },
+    "UAE-based team building CRM, ERP and HRMS systems, websites and digital marketing. Practical technology that makes business easier.";  
+    
+  export const metadata: Metadata = {
+    metadataBase: new URL("https://cleverwink.ae"),
+    title: { default: title, template: "%s | CLEVER WINK" },
+    description,
+    alternates: { canonical: "/" },
+    openGraph: { type: "website", siteName: "CLEVER WINK", url: "/", title, description, locale: "en_AE" },
+    twitter: { card: "summary_large_image", title, description },
 };
 
 export const viewport: Viewport = { themeColor: "#000000" };

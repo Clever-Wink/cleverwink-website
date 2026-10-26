@@ -21,8 +21,8 @@ export default function NotFound() {
           <Link href="/" className="rounded-lg bg-signal px-6 py-3.5 text-sm font-medium text-ink transition hover:-translate-y-0.5">
             Back to home
           </Link>
-          <Link href="/#contact" className="rounded-lg border border-fog/60 px-6 py-3.5 text-sm font-medium text-white transition hover:border-signal">
-            Book a Demo
+          <Link href="/#contact" className="rounded-lg border border-fog/60 px-4 py-3.5 text-sm font-medium text-white transition hover:border-signal">
+            Book a Consultation
           </Link>
         </div>
         <nav aria-label="Helpful links" className="mt-10 flex gap-6 text-sm text-mist">

@@ -40,11 +40,13 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import Reveal from "@/components/reveal";
 import { services } from "@/lib/services";
+import TextReveal from "../text-reveal";
 
 export default function Services() {
   const [open, setOpen] = useState(0);
 
   return (
+    
     <section id="services" className="bg-ink px-6 py-20 md:py-28">
       <div className="mx-auto max-w-[1200px]">
         <Reveal className="mx-auto max-w-2xl text-center">
@@ -56,6 +58,7 @@ export default function Services() {
         </Reveal>
 
         {/* One black container holding every panel */}
+        <Reveal>
         <div className="mt-12 rounded-2xl border border-white/10 bg-neutral-950 p-2 sm:p-3">
           <div className="flex flex-col gap-2 sm:gap-3 lg:h-[26rem] lg:flex-row">
             {services.map((s, i) => {
@@ -137,6 +140,7 @@ export default function Services() {
             })}
           </div>
         </div>
+        </Reveal>
       </div>
     </section>
   );

@@ -4,7 +4,7 @@ import { motion, useReducedMotion } from "motion/react";
 import { Inbox, Workflow, MessageSquare, BarChart3 } from "lucide-react";
 import { Tooltip } from "@/components/ui/tooltip-card";
 
-const term = "cursor-pointer font-medium text-white underline decoration-dotted underline-offset-4";
+const term = "cursor-pointer font-medium text-white underline-offset-4";
 
 // Sample workflow shown in the card.
 const steps = [
@@ -85,6 +85,9 @@ export default function About() {
 <div className="mt-8 max-w-lg space-y-5 text-mist">
   <div>
     CLEVER WINK is a UAE-based company that helps growing businesses run and grow online. We build the systems you work in, such as{" "}
+    <Tooltip containerClassName="text-mist" content="Integrated business management software that connects core company processes into a single shared database and platform">
+      <span className={term}>ERP</span>
+    </Tooltip>{" "},{" "}
     <Tooltip containerClassName="text-mist" content="Customer relationship management software that keeps every lead and customer in one place.">
       <span className={term}>CRM</span>
     </Tooltip>{" "}
@@ -103,8 +106,8 @@ export default function About() {
   </div>
   <p className="text-white">Tell us what you need. We take it from idea to launch.</p>
 </div>
-          <a href="#contact" className="mt-8 inline-block rounded-lg bg-signal px-6 py-3.5 text-sm font-medium text-ink transition hover:-translate-y-0.5">
-            Book a Demo
+          <a href="#contact" className="mt-8 inline-block rounded-lg bg-signal px-4 py-3.5 text-sm font-medium text-ink transition hover:-translate-y-0.5">
+            Book a Consultation
           </a>
         </motion.div>
 

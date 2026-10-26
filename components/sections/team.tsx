@@ -6,10 +6,10 @@ import Reveal from "@/components/reveal";
 // For your own photos: put them in public/team/ and use src: "/team/name.jpg".
 const img = (id: string) => `https://images.unsplash.com/${id}?q=80&w=900&auto=format&fit=crop`;
 const team = [
-  { name: "Manu Mohanan", role: "Founder & Graphic Designer", linkedin: "https://www.linkedin.com/in/username", src:("/Manu_Image.jpeg") },
-  { name: "Aparna Unni", role: "Web Designer", linkedin: "https://www.linkedin.com/in/username", src:("/Aparna.jpeg") },
-  // { name: "Emily Watson", role: "Customer Success Lead", linkedin: "https://www.linkedin.com/in/username", src: img("photo-1623582854588-d60de57fa33f") },
-  // { name: "James Kim", role: "Data & Reporting Specialist", linkedin: "https://www.linkedin.com/in/username", src: img("photo-1636041293178-808a6762ab39") },
+  { name: "Manu Mohanan", role: "Founder & Art Director", linkedin: "https://www.linkedin.com/in/manu-mohanan-black555", src:("/team/Manu.jpeg") },
+  { name: "Ajesh", role: "Cheif Technology Officer", linkedin: "https://www.linkedin.com/in/username", src:("/team/Ajesh.jpeg")},
+  { name: "Srijith", role: "Project Manager", linkedin: "https://www.linkedin.com/in/username", src:("/team/Srijith.webp") },
+  { name: "Aparna Unni", role: "Software Developer", linkedin: "https://www.linkedin.com/in/aparna-unni-928514225", src:("/team/Aparna.jpeg") },
 ];
 
 export default function Team() {
