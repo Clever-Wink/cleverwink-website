@@ -29,7 +29,7 @@ export function Navbar() {
           ))}
         </div>
         <div className="flex items-center gap-3">
-          <a href="#contact" className="hidden rounded-lg bg-signal px-3.5 py-3 text-sm transition hover:-translate-y-0.5 sm:block text-ink font-medium">Book a Consultation</a>
+          <a href="#contact" className="hidden rounded-lg bg-signal px-3.5 py-3 text-sm transition hover:-translate-y-0.5 sm:block text-ink font-medium">Book a Demo</a>
           <button aria-label="Menu" aria-expanded={open} onClick={() => setOpen(!open)} className="p-2 md:hidden">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
               {open ? <path d="M6 6l12 12M18 6L6 18" /> : <path d="M4 7h16M4 12h16M4 17h16" />}
@@ -42,7 +42,7 @@ export function Navbar() {
           {links.map(([label, href]) => (
             <a key={href} href={href} onClick={() => setOpen(false)} className="block py-3 text-sm font-medium uppercase tracking-[0.05em] text-mist">{label}</a>
           ))}
-          <a href="#contact" onClick={() => setOpen(false)} className="mt-3 block rounded-lg bg-signal px-4 py-3 text-center text-m text-ink">Book a Consultation</a>
+          <a href="#contact" onClick={() => setOpen(false)} className="mt-3 block rounded-lg bg-signal px-4 py-3 text-center text-m text-ink">Book a Demo</a>
         </div>
       )}
     </nav>

@@ -63,22 +63,13 @@ className={`absolute inset-0 z-10 portrait:bg-[linear-gradient(to_top,rgba(0,0,0
           </h1>
           <p className=" hidden sm:block mt-5 max-w-lg text-base text-neutral-200 sm:mt-6 sm:text-lg">
             Empowering businesses across the UAE with ERP, CRM and HRMS solutions, alongside web development, digital marketing and creative services — all under one roof.          </p>
-<div className="mt-8 mb-15 flex w-full flex-nowrap items-center gap-3 sm:gap-4 sm:justify-start">
-
-  <a
-    href="#contact"
-    className="flex-1 sm:flex-none rounded-lg bg-signal px-3 py-3.5 text-center text-sm font-medium text-ink transition hover:-translate-y-0.5 sm:px-5"
-  >
-    Book a Consultation
-  </a>
-
-  <a
-    href="#services"
-    className="flex-1 sm:flex-none rounded-lg border border-white/30 px-3 py-3.5 text-center text-sm font-medium text-white transition hover:border-signal sm:px-6"
-  >
-    See our services
-  </a>
-
+          <div className="mt-8 flex flex-wrap items-center gap-3 sm:gap-4 sm:justify-start mb-15 flex justify-center">
+            <a href="#contact" className="rounded-lg bg-signal px-3.5 py-3.5 text-sm font-medium text-ink transition hover:-translate-y-0.5">
+              Book a Demo
+            </a>
+            <a href="#services" className="rounded-lg border border-white/30 px-6 py-3.5 text-sm font-medium text-white transition hover:border-signal">
+              See our services
+            </a>
           </div>
         </div>
       </div>

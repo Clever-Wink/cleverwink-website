@@ -57,7 +57,7 @@ export default async function ServicePage({ params }: Props) {
 
             {/* <h1 className="mt-6 text-3xl font-light leading-tight tracking-tight sm:text-4xl md:text-6xl">{s.heading}</h1> */}
             <p className="mx-auto mt-6 max-w-2xl text-lg text-mist">{s.intro}</p>
-            <a href="#contact" className="mt-8 inline-block rounded-lg bg-signal px-6 py-3.5 text-sm font-medium text-ink transition hover:-translate-y-0.5">Book a Consultation</a>
+            <a href="#contact" className="mt-8 inline-block rounded-lg bg-signal px-6 py-3.5 text-sm font-medium text-ink transition hover:-translate-y-0.5">Book a Demo</a>
           </div>
         </section>
 

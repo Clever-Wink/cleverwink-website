@@ -107,7 +107,7 @@ export default function About() {
   <p className="text-white">Tell us what you need. We take it from idea to launch.</p>
 </div>
           <a href="#contact" className="mt-8 inline-block rounded-lg bg-signal px-4 py-3.5 text-sm font-medium text-ink transition hover:-translate-y-0.5">
-            Book a Consultation
+            Book a Demo
           </a>
         </motion.div>
 
