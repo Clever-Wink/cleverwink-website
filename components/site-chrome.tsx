@@ -19,24 +19,76 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
   return (
     <nav className="fixed inset-x-0 top-0 z-50 bg-ink/100 py-5">
-      <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 md:px-0">
-        <a href="#top" aria-label="CLEVER WINK home" className="flex items-center">
-          <Image src="/CLEVER-WINK.png" alt="CLEVER WINK" width={5843} height={1713} priority className="h-10 w-auto md:h-16" />
+
+<div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 md:px-0">
+
+  {/* Logo - Left */}
+  <a
+    href="#top"
+    aria-label="CLEVER WINK home"
+    className="flex shrink-0 items-center"
+  >
+    <Image
+      src="/CLEVER-WINK.png"
+      alt="CLEVER WINK"
+      width={5843}
+      height={1713}
+      priority
+      className="h-10 w-auto md:h-16"
+    />
+  </a>
+
+  {/* Navigation + Button - Right */}
+  <div className="flex items-center gap-8 lg:gap-12">
+
+    {/* Desktop Navigation */}
+    <nav className="hidden items-center gap-2 md:flex">
+      {links.map(([label, href]) => (
+        <a
+          key={href}
+          href={href}
+          className="px-3 text-[13px] font-medium uppercase tracking-[0.05em] text-fog transition-colors hover:text-white"
+        >
+          {label}
         </a>
-        <div className="hidden gap-2 md:flex">
-          {links.map(([label, href]) => (
-            <a key={href} href={href} className="px-3 text-[13px] font-medium uppercase tracking-[0.05em] text-fog transition-colors hover:text-white">{label}</a>
-          ))}
-        </div>
-        <div className="flex items-center gap-3">
-          <a href="#contact" className="hidden rounded-lg bg-signal px-3.5 py-3 text-sm transition hover:-translate-y-0.5 sm:block text-ink font-medium">Book a Demo</a>
-          <button aria-label="Menu" aria-expanded={open} onClick={() => setOpen(!open)} className="p-2 md:hidden">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-              {open ? <path d="M6 6l12 12M18 6L6 18" /> : <path d="M4 7h16M4 12h16M4 17h16" />}
-            </svg>
-          </button>
-        </div>
-      </div>
+      ))}
+    </nav>
+
+    {/* Button + Mobile Menu */}
+    <div className="flex items-center gap-3">
+      <a
+        href="#contact"
+        className="hidden rounded-lg bg-signal px-3.5 py-3 text-sm font-medium text-ink transition hover:-translate-y-0.5 sm:block"
+      >
+        Book a Demo
+      </a>
+
+      <button
+        aria-label="Menu"
+        aria-expanded={open}
+        onClick={() => setOpen(!open)}
+        className="p-2 md:hidden"
+      >
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+        >
+          {open ? (
+            <path d="M6 6l12 12M18 6L6 18" />
+          ) : (
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          )}
+        </svg>
+      </button>
+    </div>
+
+  </div>
+</div>
+
       {open && (
         <div className="border-t border-white/10 px-6 pb-4 pt-2 md:hidden">
           {links.map(([label, href]) => (

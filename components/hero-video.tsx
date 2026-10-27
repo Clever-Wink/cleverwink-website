@@ -48,8 +48,8 @@
 import { useEffect, useRef, useState } from "react";
 
 // Paths of your files inside public/. Spelling and capital letters must match exactly.
-const VIDEO = { wide: "/hero/Video_Web.mp4", tall: "/hero/Video_Mobile.mp4" };
-const POSTER = { wide: "/hero/Video_Web.jpg", tall: "/hero/Video_Mobile.png" };
+const VIDEO = { wide: "/hero/Hero_Video_Web.mp4", tall: "/hero/Hero_Video_Mobile.mp4" };
+const POSTER = { wide: "/hero/Video_Web_Img.jpg", tall: "/hero/Video_Mobile_Img.jpg" };
 
 // Invisible until its first frame is ready, then fades in over the image
 function Clip({ src }: { src: string }) {

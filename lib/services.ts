@@ -1,4 +1,4 @@
-import { Database, Users, Megaphone, Palette, Monitor, type LucideIcon } from "lucide-react";
+import { Database, Boxes, Users, Megaphone, Palette, Monitor, type LucideIcon } from "lucide-react";
 
 export type Service = {
   slug: string;
@@ -19,11 +19,34 @@ export type Service = {
 // PLACEHOLDER CONTENT: edit everything to match what you really offer.
 export const services: Service[] = [
   {
+  slug: "erp",
+  title: "ERP Solutions",
+  icon: Boxes,
+  short: "One system that connects your sales, stock, finance and operations.",
+  image: "/services/erp.jpeg",
+  heading: "ERP solutions that run your whole business from one system",
+  intro: "We set up, customise and connect an ERP so your sales, purchasing, inventory and accounts work from the same data, not separate spreadsheets.",
+  metaTitle: "ERP Setup & Customisation Services",
+  metaDescription: "ERP setup, customisation, data migration and integration for growing businesses. Connect sales, inventory, purchasing and accounts in one system.",
+  features: [
+    { title: "Setup & customisation", text: "Modules, workflows and approvals configured around how your business actually runs." },
+    { title: "Data migration", text: "Move products, customers, suppliers and balances from spreadsheets or your old system, cleaned and checked." },
+    { title: "Integrations & automation", text: "Connect your ERP with your CRM, HRMS, website and other tools, and automate repeat tasks." },
+    { title: "Reports & training", text: "Dashboards for owners and managers, plus training so your team uses the system properly." },
+  ],
+  industries: ["Trading & distribution", "Retail", "Manufacturing", "Construction & contracting", "Professional services"],
+  faqs: [
+    { q: "Which ERP do you work with?", a: "We can work with popular platforms or help you choose one that fits your size and budget. Tell us what you use today, or what you need it to do." },
+    { q: "Can the ERP connect to our CRM and HRMS?", a: "Yes. We connect your systems so customer, sales and staff data is not entered twice." },
+    { q: "How long does an ERP project take?", a: "It depends on how many modules and how much data you have. We agree the scope and the plan with you before we start." },
+  ],
+},
+  {
     slug: "crm",
     title: "CRM Solutions",
     icon: Database,
     short: "Set up and customise a CRM that fits how your team sells.",
-    image: "/CleverWink CRM Dashboard.png",
+    image: "/services/crm.jpeg",
     heading: "CRM solutions that keep every lead and customer in one place",
     intro: "We set up, customise and automate your CRM so leads are captured, followed up and tracked without manual work.",
     metaTitle: "CRM Setup & Customisation Services",
@@ -44,7 +67,7 @@ export const services: Service[] = [
     title: "HRMS Solutions",
     icon: Users,
     short: "Manage employees, attendance and leave in one system.",
-    image: "/hrms.jpg",
+    image: "/services/hrms.jpeg",
 
     heading: "HRMS that takes the paperwork out of HR",
     intro: "We set up and automate your HR processes, from employee records to leave approvals, so your team spends less time on admin.",
@@ -66,7 +89,7 @@ export const services: Service[] = [
     title: "Digital Marketing",
     icon: Megaphone,
     short: "Reach and win customers with search, social and paid campaigns.",
-    image: "/digital.webp",
+    image: "/services/digital_marketing.jpeg",
 
     heading: "Digital marketing that brings the right customers to you",
     intro: "We plan and run campaigns across search, social media and messaging, and connect them to your CRM so every enquiry is tracked.",
@@ -88,7 +111,7 @@ export const services: Service[] = [
     title: "Web Design",
     icon: Monitor,
     short: "Fast, mobile-friendly websites that turn visitors into enquiries.",
-    image: "/webdesign.webp",
+    image: "/services/web_designing.jpeg",
     heading: "Websites designed to win trust and generate enquiries",
     intro: "We design and build modern, fast websites that look professional on every device and are ready for search engines.",
     metaTitle: "Web Design & Development Services",
@@ -108,7 +131,7 @@ export const services: Service[] = [
   slug: "design-creative",
   title: "Design & Creative",
   icon: Palette,
-  image: "/graphicdesign.jpg",
+  image: "/services/design.jpeg",
   short: "Graphic design, photography and video that make your brand stand out.",
   heading: "Design and photography that make your brand look professional",
   intro: "We create the visuals your business needs, from logos and brand material to commercial photography and event video.",
