@@ -52,6 +52,8 @@
 "use client";
 import { useState } from "react";
 import { services } from "@/lib/services";
+import Reveal from "../reveal";
+
 
 const CONTACT_EMAIL = "info@cleverwink.ae";
 const field =
@@ -88,7 +90,7 @@ export default function Contact({ defaultService = "" }: { defaultService?: stri
       <div className="mx-auto grid max-w-[1200px] gap-12 md:grid-cols-2 md:gap-16">
         <div>
           <p className="mb-3 text-sm font-medium uppercase tracking-[0.05em] text-arc">Contact</p>
-          <h2 className="text-4xl font-light tracking-tight md:text-5xl">Let&apos;s talk about what your business needs</h2>
+          <Reveal><h2 className="text-4xl font-light tracking-tight md:text-5xl">Let&apos;s talk about what your business needs</h2></Reveal>
           <p className="mt-6 max-w-md text-mist">Tell us what you are working on. We&apos;ll reply by email and show you what we can build or automate.</p>
           <a href={`mailto:${CONTACT_EMAIL}`} className="mt-8 inline-block font-mono text-sm text-white underline underline-offset-4">
             {CONTACT_EMAIL}
