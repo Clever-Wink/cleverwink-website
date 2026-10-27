@@ -9,6 +9,5 @@ export default function robots(): MetadataRoute.Robots {
       disallow: ["/api/"],
     },
     sitemap: "https://cleverwink.ae/sitemap.xml",
-    host: "https://cleverwink.ae",
   };
 }

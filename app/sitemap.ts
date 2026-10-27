@@ -1,5 +1,6 @@
 
 import type { MetadataRoute } from "next";
+import { services } from "@/lib/services";
 
 const baseUrl = "https://cleverwink.ae";
 
@@ -8,8 +9,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/about",
     "/services",
-    "/services/crm",
+    // "/services/crm",
     "/contact",
+    ...services.map((s) => `/services/${s.slug}`),
   ];
 
   return pages.map((page) => ({

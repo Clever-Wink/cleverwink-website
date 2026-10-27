@@ -19,7 +19,7 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
   return (
     <nav className="fixed inset-x-0 top-0 z-50 bg-ink/100 py-5">
-      <div className="mx-auto flex max-w-[1200px] items-center justify-between px-6 md:px-0">
+      <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 md:px-0">
         <a href="#top" aria-label="CLEVER WINK home" className="flex items-center">
           <Image src="/CLEVER-WINK.png" alt="CLEVER WINK" width={5843} height={1713} priority className="h-10 w-auto md:h-16" />
         </a>
