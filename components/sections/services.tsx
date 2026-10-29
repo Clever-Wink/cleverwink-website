@@ -156,6 +156,7 @@ import Image from "next/image";
 import Reveal from "@/components/reveal";
 import { services } from "@/lib/services";
 
+
 const AUTOPLAY_MS = 4000;
 
 export default function Services() {

@@ -52,7 +52,7 @@ const orgJsonLd = {
   "@id": "https://cleverwink.ae/#organization",
   name: "CLEVER WINK",
   url: "https://cleverwink.ae/",
-  logo: "https://cleverwink.ae/clever-wink-logo.webp",
+  logo: "https://cleverwink.ae/icon.png",
   description,
   areaServed: {
     "@type": "Country",

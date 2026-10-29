@@ -15,11 +15,12 @@ export default function Page() {
     <main>
       <Navbar />
       <Hero />
+      <Services />
       <About />
       
       {/* <DashboardPreview /> */}
       {/* <Automations /> */}
-      <Services />
+      
       {/* <Works /> */}
     <Testimonials />
       <Team />

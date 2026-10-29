@@ -21,13 +21,7 @@ export function Navbar() {
     <nav className="fixed inset-x-0 top-0 z-50 bg-ink/100 py-5">
 
 <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 md:px-0">
-
-  {/* Logo - Left */}
-  <a
-    href="#top"
-    aria-label="CLEVER WINK home"
-    className="flex shrink-0 items-center"
-  >
+  <a href="#top" aria-label="CLEVER WINK home" className="flex shrink-0 items-center">
     <Image
       src="/CLEVER-WINK.png"
       alt="CLEVER WINK"
@@ -38,7 +32,7 @@ export function Navbar() {
     />
   </a>
 
-  {/* Navigation + Button - Right */}
+  
   <div className="flex items-center gap-8 lg:gap-12">
 
     {/* Desktop Navigation */}
@@ -118,6 +112,7 @@ export function Footer() {
         <div>
   <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-fog">Contact</p>
   <ul className="mt-4 space-y-2 text-sm text-mist">
+    <p>Sharjah Media City <br/>Sharjah, UAE</p>
     <li><a href="mailto:hello@cleverwink.com" className="hover:text-white">info@cleverwink.com</a></li>
     {/* <li><a href="tel:+000000000000" className="hover:text-white">+00 000 000 0000</a></li> */}
   </ul>

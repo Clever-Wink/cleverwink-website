@@ -11,8 +11,9 @@ export type Service = {
   metaDescription: string;
   image: string;
   features: { title: string; text: string }[];
-  industries: string[];
+  industries: string | { name: string; text?: string; image?: string }[];
   faqs: { q: string; a: string }[];
+  
   
 };
 
@@ -34,8 +35,13 @@ export const services: Service[] = [
     { title: "Integrations & automation", text: "Connect your ERP with your CRM, HRMS, website and other tools, and automate repeat tasks." },
     { title: "Reports & training", text: "Dashboards for owners and managers, plus training so your team uses the system properly." },
   ],
-  industries: ["Trading & distribution", "Retail", "Manufacturing", "Construction & contracting", "Professional services"],
-  faqs: [
+industries: [
+  { name: "Trading & distribution", text: "Connect orders, stock, purchasing and invoicing so you always know what you have and what is owed." },
+  { name: "Retail", text: "Keep stock, sales and suppliers in sync across your shop and online store." },
+  { name: "Manufacturing", text: "Plan materials, track production and keep costs visible from raw stock to finished goods." },
+  { name: "Construction & contracting", text: "Follow project costs, purchasing and payments so each job stays on budget." },
+  { name: "Professional services", text: "Connect projects, time, billing and accounts in one system." },
+],  faqs: [
     { q: "Which ERP do you work with?", a: "We can work with popular platforms or help you choose one that fits your size and budget. Tell us what you use today, or what you need it to do." },
     { q: "Can the ERP connect to our CRM and HRMS?", a: "Yes. We connect your systems so customer, sales and staff data is not entered twice." },
     { q: "How long does an ERP project take?", a: "It depends on how many modules and how much data you have. We agree the scope and the plan with you before we start." },
@@ -57,8 +63,13 @@ export const services: Service[] = [
       { title: "Lead & follow-up automation", text: "Leads from forms, ads and WhatsApp are routed and followed up automatically." },
       { title: "Reports & training", text: "Dashboards for your team, plus training so everyone uses the system." },
     ],
-    industries: ["Real estate", "Gyms & fitness", "Salons & wellness", "Clinics", "Education"],
-    faqs: [
+industries: [
+  { name: "Real estate", text: "Capture enquiries from portals, ads and WhatsApp, and follow up every viewing and deal." },
+  { name: "Gyms & fitness", text: "Track trials, memberships and renewals, and remind members before they lapse." },
+  { name: "Salons & wellness", text: "Keep client history and bookings in one place, and bring regulars back with timely follow-ups." },
+  { name: "Clinics", text: "Manage patient enquiries, appointments and follow-ups without chasing messages." },
+  { name: "Education", text: "Track enquiries, applications and admissions from first contact to enrolment." },
+],    faqs: [
       { q: "Which CRM do you work with?", a: "We can work with popular platforms or help you choose one that fits your team and budget. Tell us what you use today." },
     ],
   },
@@ -79,8 +90,13 @@ export const services: Service[] = [
       { title: "Onboarding", text: "New joiners get forms, access and a welcome message automatically." },
       { title: "HR reports", text: "Headcount, attendance and leave reports ready when you need them." },
     ],
-    industries: ["Retail", "Healthcare", "Hospitality", "Education", "Startups & SMEs"],
-    faqs: [
+industries: [
+  { name: "Trading & distribution", text: "Connect orders, stock, purchasing and invoicing so you always know what you have and what is owed." },
+  { name: "Retail", text: "Keep stock, sales and suppliers in sync across your shop and online store." },
+  { name: "Manufacturing", text: "Plan materials, track production and keep costs visible from raw stock to finished goods." },
+  { name: "Construction & contracting", text: "Follow project costs, purchasing and payments so each job stays on budget." },
+  { name: "Professional services", text: "Connect projects, time, billing and accounts in one system." },
+],    faqs: [
       { q: "Does it include payroll?", a: "We scope the HRMS around your needs. Share your payroll requirements on the demo call and we will confirm what is included." },
     ],
   },
@@ -101,8 +117,13 @@ export const services: Service[] = [
       { title: "Paid advertising", text: "Search and social ads set up, tracked and improved over time." },
       { title: "Email & WhatsApp campaigns", text: "Messages that reach customers, linked to your CRM so you see the results." },
     ],
-    industries: ["Real estate", "Restaurants & cafes", "Retail & e-commerce", "Education", "Clinics & wellness"],
-    faqs: [
+industries: [
+  { name: "Trading & distribution", text: "Connect orders, stock, purchasing and invoicing so you always know what you have and what is owed." },
+  { name: "Retail", text: "Keep stock, sales and suppliers in sync across your shop and online store." },
+  { name: "Manufacturing", text: "Plan materials, track production and keep costs visible from raw stock to finished goods." },
+  { name: "Construction & contracting", text: "Follow project costs, purchasing and payments so each job stays on budget." },
+  { name: "Professional services", text: "Connect projects, time, billing and accounts in one system." },
+],    faqs: [
       { q: "Can you guarantee rankings or sales?", a: "No one honestly can. We focus on proven work and clear reporting, so you can see what is working." },
     ],
   },
@@ -122,8 +143,13 @@ export const services: Service[] = [
       { title: "Redesign & speed", text: "Refresh an old site and make it faster and easier to use on phones." },
       { title: "SEO-ready build", text: "Clean structure, fast loading and proper metadata from day one." },
     ],
-    industries: ["Professional services", "Real estate", "Restaurants", "Education", "Clinics & wellness"],
-    faqs: [
+industries: [
+  { name: "Trading & distribution", text: "Connect orders, stock, purchasing and invoicing so you always know what you have and what is owed." },
+  { name: "Retail", text: "Keep stock, sales and suppliers in sync across your shop and online store." },
+  { name: "Manufacturing", text: "Plan materials, track production and keep costs visible from raw stock to finished goods." },
+  { name: "Construction & contracting", text: "Follow project costs, purchasing and payments so each job stays on budget." },
+  { name: "Professional services", text: "Connect projects, time, billing and accounts in one system." },
+],    faqs: [
       { q: "Will my website work on mobile?", a: "Yes. Every site we build is designed mobile-first and tested on phones, tablets and desktops." },
     ],
   },
@@ -143,8 +169,13 @@ export const services: Service[] = [
     { title: "Video", text: "Event and promotional videos for meetings, weddings and campaigns." },
     { title: "Visual merchandising", text: "Display and styling ideas that make your space and products stand out." },
   ],
-  industries: ["Real estate", "Retail", "Tourism", "Restaurants", "Events"],
-  faqs: [
+industries: [
+  { name: "Trading & distribution", text: "Connect orders, stock, purchasing and invoicing so you always know what you have and what is owed." },
+  { name: "Retail", text: "Keep stock, sales and suppliers in sync across your shop and online store." },
+  { name: "Manufacturing", text: "Plan materials, track production and keep costs visible from raw stock to finished goods." },
+  { name: "Construction & contracting", text: "Follow project costs, purchasing and payments so each job stays on budget." },
+  { name: "Professional services", text: "Connect projects, time, billing and accounts in one system." },
+],  faqs: [
     { q: "Can you refresh our whole brand?", a: "Yes. Share what you have today and we will suggest a plan." },
   ],
 }
