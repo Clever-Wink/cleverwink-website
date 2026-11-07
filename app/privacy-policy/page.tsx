@@ -1,283 +1,236 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import { COMPANY, LegalLayout, P, UL, type LegalSection } from "@/components/legal-layout";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | CLEVER WINK",
   description:
-    "How CLEVER WINK collects, uses and protects your personal data when you visit our website or contact us.",
+    "How CLEVER WINK collects, uses and protects your personal data, and the rights you have over it.",
   alternates: { canonical: "/privacy-policy" },
 };
 
-const EFFECTIVE_DATE = "29 October 2026";
-const EMAIL = "info@cleverwink.ae";
+const mail = (
+  <a
+    href={`mailto:${COMPANY.email}`}
+    className="text-[#FFF200] underline underline-offset-4 hover:no-underline"
+  >
+    {COMPANY.email}
+  </a>
+);
 
-type Section = { title: string; content: React.ReactNode };
-
-const sections: Section[] = [
+const sections: LegalSection[] = [
   {
-    title: "1. Who we are",
-    content: (
-      <p>
-        This website is operated by CLEVER WINK LLC (&quot;CLEVER WINK&quot;,
-        &quot;we&quot;, &quot;us&quot;), a company licensed and based in the
-        United Arab Emirates. We provide CRM, HRMS, digital marketing and web
-        design services with automation built in. For this website, we are the
-        data controller of the personal data described in this policy. You can
-        reach us at{" "}
-        <a href={`mailto:${EMAIL}`}>{EMAIL}</a>.
-      </p>
-    ),
-  },
-  {
-    title: "2. What information we collect",
-    content: (
+    id: "who-we-are",
+    title: "Who we are",
+    body: (
       <>
-        <p>We collect only what we need to respond to you and run the site.</p>
-        <ul>
-          <li>
-            <strong>Information you give us.</strong> When you fill in the
-            contact form or email us, we receive your name, email address,
-            phone number, company name (if provided), the service you are
-            interested in, and the contents of your message.
-          </li>
-          <li>
-            <strong>Technical information.</strong> When you visit, our
-            hosting and security systems automatically record your IP address,
-            browser type, device type, operating system, pages visited and the
-            date and time of your visit.
-          </li>
-          <li>
-            <strong>Cookies and similar technologies.</strong> See section 6.
-          </li>
-        </ul>
-        <p>
-          We do not knowingly collect sensitive personal data through this
-          website, and we ask that you do not send it to us.
-        </p>
+        <P>
+          {COMPANY.name} is a business based in the United Arab Emirates. We build software and systems, websites,
+          CRM and HRMS solutions, and run digital marketing and design work for
+          other businesses. This policy explains how we handle personal data
+          when you use {COMPANY.website} or contact us.
+        </P>
+        <P>
+          We are the data controller for the data described here. You can reach
+          us at {mail}.
+        </P>
       </>
     ),
   },
   {
-    title: "3. How we use your information",
-    content: (
-      <ul>
-        <li>To reply to your enquiries and prepare quotes or proposals.</li>
-        <li>
-          To provide the services you request and to manage our relationship
-          with you if you become a client.
-        </li>
-        <li>
-          To keep the website secure, prevent spam and abuse, and fix technical
-          problems.
-        </li>
-        <li>
-          To understand how the site is used so we can improve its content and
-          performance.
-        </li>
-        <li>To comply with our legal and regulatory obligations.</li>
-      </ul>
-    ),
-  },
-  {
-    title: "4. Our legal basis for processing",
-    content: (
-      <p>
-        We process personal data on the basis of your consent (for example,
-        when you submit the contact form), where it is necessary to take steps
-        at your request before entering into a contract or to perform a
-        contract, where we are required to by UAE law, and for our legitimate
-        interest in operating and securing our business, provided this does
-        not override your rights. You may withdraw your consent at any time by
-        contacting us.
-      </p>
-    ),
-  },
-  {
-    title: "5. Who we share it with",
-    content: (
+    id: "what-we-collect",
+    title: "What we collect",
+    body: (
       <>
-        <p>We do not sell your personal data. We share it only with:</p>
-        <ul>
+        <P>We collect only what we need to respond to you and run the site.</P>
+        <UL>
           <li>
-            <strong>Service providers</strong> that help us run the website
-            and our business, such as our hosting provider (Vercel), our email
-            delivery provider (Resend) and our business email and domain
-            providers. They may only use your data to provide their services
-            to us.
+            <strong className="text-white">Details you give us.</strong> When you
+            use the contact form or email us, we receive your name, email
+            address, phone number (if you provide it) and your message.
           </li>
           <li>
-            <strong>Professional advisers</strong>, such as accountants and
-            lawyers, where needed.
+            <strong className="text-white">Technical data.</strong> Our hosting
+            provider logs basic information such as your IP address, browser,
+            device type and the pages you request. We use this to keep the site
+            secure and working.
           </li>
           <li>
-            <strong>Authorities</strong>, where we are required to do so by
-            law or to protect our rights.
+            <strong className="text-white">Cookies.</strong> See the cookies
+            section below.
           </li>
-        </ul>
+        </UL>
+        <P>
+          We do not ask for sensitive data through the site. Please do not
+          include things like ID numbers or payment card details in your
+          message.
+        </P>
       </>
     ),
   },
   {
-    title: "6. Cookies",
-    content: (
-      <p>
-        This website uses only the cookies and similar technologies needed to
-        make it work and keep it secure. If we add analytics or marketing
-        cookies in future, we will ask for your consent where required and
-        update this policy. You can block or delete cookies in your browser
-        settings, although some parts of the site may not work properly.
-      </p>
+    id: "how-we-use-it",
+    title: "How we use your data",
+    body: (
+      <UL>
+        <li>To reply to your enquiry and send you proposals or quotes</li>
+        <li>To provide and manage services you have asked us for</li>
+        <li>To keep the website secure and fix technical problems</li>
+        <li>To meet legal, tax and accounting obligations</li>
+        <li>
+          To send you updates about our services, only if you have agreed to
+          receive them. You can opt out at any time.
+        </li>
+      </UL>
     ),
   },
   {
-    title: "7. Transfers outside the UAE",
-    content: (
-      <p>
-        Some of our service providers store or process data on servers outside
-        the UAE. Where this happens, we take steps to make sure your data
-        remains protected, such as using providers with appropriate security
-        and contractual safeguards, in line with UAE data protection law.
-      </p>
+    id: "legal-basis",
+    title: "Why we are allowed to use it",
+    body: (
+      <P>
+        We process your data based on your consent (for example, when you submit
+        the contact form), because it is needed to take steps toward or carry out
+        a contract with you, because the law requires it, or for our legitimate
+        interest in running a secure business site, in line with the UAE Federal
+        Decree-Law No. 45 of 2021 on the Protection of Personal Data (PDPL). You
+        can withdraw consent at any time by contacting us.
+      </P>
     ),
   },
   {
-    title: "8. How long we keep your data",
-    content: (
-      <p>
-        We keep enquiry details for as long as needed to respond to you and,
-        if you become a client, for the duration of our relationship and the
-        period we are required to keep business records under UAE law.
-        Enquiries that do not lead to a project are deleted within a
-        reasonable time, normally within 24 months. After that, we delete or
-        anonymise the data.
-      </p>
-    ),
-  },
-  {
-    title: "9. How we protect your data",
-    content: (
-      <p>
-        We use reasonable technical and organisational measures to protect
-        your personal data, including encrypted connections (HTTPS), access
-        controls and the use of reputable providers. No method of transmission
-        or storage is completely secure, so we cannot guarantee absolute
-        security. If a breach affecting your data occurs, we will notify the
-        authorities and you where the law requires.
-      </p>
-    ),
-  },
-  {
-    title: "10. Your rights",
-    content: (
+    id: "sharing",
+    title: "Who we share it with",
+    body: (
       <>
-        <p>Under UAE data protection law you have the right to:</p>
-        <ul>
-          <li>request access to the personal data we hold about you;</li>
-          <li>ask us to correct inaccurate or incomplete data;</li>
-          <li>ask us to delete your data or restrict its processing;</li>
-          <li>object to processing, including direct marketing;</li>
-          <li>withdraw your consent at any time;</li>
+        <P>We do not sell your personal data. We share it only with providers that help us run the site and our business:</P>
+        <UL>
           <li>
-            request a copy of your data in a portable format, where applicable.
+            <strong className="text-white">Resend</strong>, which delivers the
+            emails sent from our contact form
           </li>
-        </ul>
-        <p>
-          To exercise any of these rights, email us at{" "}
-          <a href={`mailto:${EMAIL}`}>{EMAIL}</a>. We may need to verify your
-          identity first and will respond within a reasonable time. If you are
-          not satisfied with our response, you may contact the UAE Data Office.
-        </p>
+          <li>
+            <strong className="text-white">Vercel</strong>, which hosts this
+            website
+          </li>
+          <li>
+            Professional advisers, regulators or authorities, where we are
+            legally required to
+          </li>
+        </UL>
+        <P>
+          These providers may only use your data to provide their service to us.
+        </P>
       </>
     ),
   },
   {
-    title: "11. Marketing messages",
-    content: (
-      <p>
-        We only send marketing emails or messages if you have asked for them or
-        you are an existing client. Every message will include a way to opt
-        out, and you can also tell us at any time to stop.
-      </p>
+    id: "transfers",
+    title: "Transfers outside the UAE",
+    body: (
+      <P>
+        Our providers may store or process data on servers outside the UAE. When
+        that happens, we rely on providers that apply appropriate safeguards, and
+        we only transfer data where the PDPL allows it.
+      </P>
     ),
   },
   {
-    title: "12. Children",
-    content: (
-      <p>
-        Our website and services are intended for businesses and are not
-        directed at children. We do not knowingly collect personal data from
-        anyone under 18. If you believe a child has sent us their data, please
-        contact us and we will delete it.
-      </p>
+    id: "retention",
+    title: "How long we keep it",
+    body: (
+      <P>
+        We keep enquiry data for as long as it takes to deal with your request
+        and any work that follows, and after that only as long as we need it for
+        legal, tax or accounting reasons. When we no longer need it, we delete or
+        anonymise it.
+      </P>
     ),
   },
   {
-    title: "13. Links to other websites",
-    content: (
-      <p>
-        Our website may link to third-party websites and social media
-        platforms such as Instagram and LinkedIn. We are not responsible for
-        their content or privacy practices, so please read their policies.
-      </p>
+    id: "your-rights",
+    title: "Your rights",
+    body: (
+      <>
+        <P>Under the PDPL you can ask us to:</P>
+        <UL>
+          <li>Confirm whether we hold your data and give you a copy</li>
+          <li>Correct data that is wrong or incomplete</li>
+          <li>Delete your data, or restrict how we use it</li>
+          <li>Stop using your data for a particular purpose</li>
+          <li>Move your data to another provider, where this applies</li>
+          <li>Withdraw consent you gave earlier</li>
+        </UL>
+        <P>
+          Email {mail} and tell us what you need. We may ask you to confirm your
+          identity first. If you are not happy with our response, you can
+          complain to the UAE Data Office.
+        </P>
+      </>
     ),
   },
   {
-    title: "14. Changes to this policy",
-    content: (
-      <p>
-        We may update this policy from time to time. The latest version will
-        always be on this page, with the effective date shown at the top. If
-        we make significant changes, we will make that clear on the website.
-      </p>
+    id: "cookies",
+    title: "Cookies",
+    body: (
+      <P>
+        This site uses only the cookies and similar storage needed to make it
+        work. If we add analytics or marketing tools later, we will ask for your
+        consent first and update this policy.
+      </P>
     ),
   },
   {
-    title: "15. Contact us",
-    content: (
-      <p>
-        If you have questions about this policy or how we handle your data,
-        contact CLEVER WINK LLC at <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
-        {/* TODO: add registered address here, e.g. ", [Office address], United Arab Emirates" */}
-        .
-      </p>
+    id: "security",
+    title: "Security",
+    body: (
+      <P>
+        We use HTTPS and access controls to protect your data. No online service
+        is completely secure, so we cannot guarantee absolute security. If a
+        breach puts your rights at risk, we will notify you and the authorities
+        as the law requires.
+      </P>
+    ),
+  },
+  {
+    id: "children",
+    title: "Children",
+    body: (
+      <P>
+        Our services are for businesses and are not aimed at anyone under 18. We
+        do not knowingly collect data from children. If you think a child has
+        sent us data, contact us and we will delete it.
+      </P>
+    ),
+  },
+  {
+    id: "changes",
+    title: "Changes to this policy",
+    body: (
+      <P>
+        We may update this policy from time to time. The effective date at the
+        top shows when it last changed. If we make a significant change, we will
+        say so on the site.
+      </P>
+    ),
+  },
+  {
+    id: "contact",
+    title: "Contact us",
+    body: (
+      <P>
+        {COMPANY.name}, {COMPANY.address}. Email {mail}.
+      </P>
     ),
   },
 ];
 
 export default function PrivacyPolicyPage() {
   return (
-    <main className="min-h-screen bg-black text-neutral-300">
-      <div className="mx-auto max-w-3xl px-5 py-24 sm:px-6 sm:py-28">
-        <Link
-          href="/"
-          className="text-sm text-neutral-400 transition-colors hover:text-[#FFF200]"
-        >
-          ← Back to home
-        </Link>
-
-        <h1 className="mt-8 text-4xl font-bold tracking-tight text-white sm:text-5xl">
-          Privacy Policy
-        </h1>
-        <p className="mt-3 text-sm text-neutral-500">
-          Effective date: {EFFECTIVE_DATE}
-        </p>
-        <p className="mt-8 leading-relaxed">
-          Your privacy matters to us. This policy explains what personal data
-          CLEVER WINK collects through this website, why we collect it, how we
-          use and protect it, and the choices and rights you have.
-        </p>
-
-        <div className="mt-12 space-y-10">
-          {sections.map((s) => (
-            <section key={s.title}>
-              <h2 className="text-xl font-semibold text-white">{s.title}</h2>
-              <div className="policy-body mt-3 space-y-3 leading-relaxed [&_a]:text-[#FFF200] [&_a]:underline-offset-4 hover:[&_a]:underline [&_li]:ml-5 [&_li]:list-disc [&_li]:pl-1 [&_ul]:space-y-2 [&_strong]:text-white">
-                {s.content}
-              </div>
-            </section>
-          ))}
-        </div>
-      </div>
-    </main>
+    <LegalLayout
+      title="Privacy Policy"
+      intro="This policy explains what personal data we collect through our website, why we collect it, and the choices you have."
+      sections={sections}
+      otherPage={{ href: "/terms-of-service", label: "Terms of Service" }}
+    />
   );
 }

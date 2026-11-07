@@ -87,7 +87,7 @@ export default function Contact({ defaultService = "" }: { defaultService?: stri
 
   return (
     <section id="contact" className="border-t border-white/10 bg-ink px-6 py-20 md:py-28">
-      <div className="mx-auto grid max-w-[1200px] gap-12 md:grid-cols-2 md:gap-16">
+      <div className="mx-auto grid max-w-[1300px] gap-12 md:grid-cols-2 md:gap-16">
         <div>
           <p className="mb-3 text-sm font-medium uppercase tracking-[0.05em] text-arc">Contact</p>
           <Reveal><h2 className="text-4xl font-light tracking-tight md:text-5xl">Let&apos;s talk about what your business needs</h2></Reveal>

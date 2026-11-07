@@ -41,6 +41,13 @@ const description =
     title: { default: title, template: "%s | CLEVER WINK" },
     description,
     alternates: { canonical: "/" },
+    icons: {
+      icon: [ 
+        { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png", },
+        { url: "/favicon-192x192.png", sizes: "192x192", type: "image/png", }, ],
+      apple: [
+        { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png", },  ],
+      },
     openGraph: { type: "website", siteName: "CLEVER WINK", url: "/", title, description, locale: "en_AE" },
     twitter: { card: "summary_large_image", title, description },
 };

@@ -15,7 +15,7 @@ const team = [
 export default function Team() {
   return (
     <section id="team" className="bg-ink px-6 py-20 md:py-28">
-      <div className="mx-auto max-w-[1200px]">
+      <div className="mx-auto max-w-[1300px]">
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="mb-3 text-sm font-medium uppercase tracking-[0.05em] text-arc">Our team</p>
           <h2 className="text-3xl font-light tracking-tight md:text-5xl">The people behind the wink</h2>

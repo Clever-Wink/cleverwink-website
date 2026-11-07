@@ -522,9 +522,9 @@ const steps = [
 ];
 
 const features: { icon: LucideIcon; title: string; text: string }[] = [
-  { icon: Lightbulb, title: "Think Smarter", text: "We turn complex business challenges into simple, practical solutions." },
-  { icon: Workflow, title: "Work Better", text: "We connect people, processes and technology to make everyday operations easier." },
-  { icon: TrendingUp, title: "Grow Stronger", text: "We build scalable digital solutions that support your business as it grows." },
+  { icon: Lightbulb, title: "Smart Solutions, Practical Results", text: "We turn complex business challenges into practical digital solutions that simplify operations and make everyday work easier." },
+  { icon: Workflow, title: "Technology Meets Creativity", text: "We combine business technology, thoughtful design and creative thinking to deliver solutions that work well and look professional." },
+  { icon: TrendingUp, title: "Connected Business Ecosystem", text: "From ERP, CRM and HRMS to websites and digital services, we help bring your essential business operations together." },
 ];
 
 /* ---------- text effect ---------- */
@@ -584,7 +584,7 @@ function WhyDeck() {
   return (
     <motion.div {...fadeUp(0.2)} ref={ref}>
       <div
-        className="relative"
+        className="relative max-w-md"
         style={{ height: CARD_H + PEEK * (n - 1) }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
@@ -627,7 +627,7 @@ function WhyDeck() {
                 </span>
               </div>
 
-              <p className="mt-4 max-w-sm text-sm text-mist">{f.text}</p>
+              <p className="mt-4 max-w-sm text-sm text-mist text-justify">{f.text}</p>
 
               {/* dims the cards that have another card on top of them */}
               <motion.div
@@ -770,7 +770,7 @@ export default function About() {
   return (
     <MotionConfig reducedMotion="user">
       <section id="about" className="relative overflow-x-clip bg-ink px-6 py-20 md:py-32">
-        <div className="mx-auto grid max-w-[1200px] items-center gap-12 md:grid-cols-2 md:gap-30">
+        <div className="mx-auto grid max-w-[1300px] items-center gap-12 md:grid-cols-2 md:gap-80">
           {/* Left: text */}
           <div>
             <motion.p {...fadeUp(0)} className="mb-3 flex items-center gap-3 text-sm font-medium uppercase tracking-[0.05em] text-arc">
@@ -824,15 +824,15 @@ export default function About() {
         </div>
 
         {/* Step path */}
-        <div className="mx-auto mt-24 max-w-[1200px] md:mt-40">
-          <div className="mb-14 max-w-2xl md:mb-20">
-            <motion.p {...fadeUp(0)} className="mb-3 text-sm font-medium uppercase tracking-[0.05em] text-arc">
-              How we work
-            </motion.p>
-            <h3 className="text-3xl font-light tracking-tight md:text-5xl">
-              <WordsReveal text="From idea to launch, one step at a time" />
-            </h3>
-          </div>
+        <div className="mx-auto mt-24 max-w-[1300px] md:mt-40">
+<div className="mb-14 md:mb-20">
+  <motion.p {...fadeUp(0)} className="mb-3 text-sm font-medium uppercase tracking-[0.05em] text-arc">
+    How we work
+  </motion.p>
+  <h3 className="text-left text-3xl font-light tracking-tight text-balance md:text-4xl lg:whitespace-nowrap xl:text-5xl">
+    <WordsReveal text="From idea to launch, one step at a time" />
+  </h3>
+</div>
           <StepPathDesktop />
           <StepPathMobile />
         </div>

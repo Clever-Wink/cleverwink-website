@@ -51,7 +51,7 @@ export default function Hero() {
 className={`absolute inset-0 z-10 portrait:bg-[linear-gradient(to_top,rgba(0,0,0,0.95)_0%,rgba(0,0,0,0.7)_55%,rgba(0,0,0,0.3)_66%,rgba(0,0,0,0)_82%)] ${shade}`}      />
       <div aria-hidden className="absolute inset-x-0 bottom-0 z-10 h-24 bg-gradient-to-t from-ink to-transparent" />
 
-      <div className={`relative z-20 mx-auto flex w-full max-w-[1200px] px-4 sm:px-6 portrait:items-end portrait:pb-6 landscape:items-center landscape:py-32 ${textSide}`}>
+      <div className={`relative z-20 mx-auto flex w-full max-w-[1300px] px-4 sm:px-6 portrait:items-end portrait:pb-6 landscape:items-center landscape:py-32 ${textSide}`}>
         <div className="max-w-xl text-center sm:text-left">
           <p className="mb-4 text-sm font-medium uppercase tracking-[0.05em] text-arc">BUSINESS SOFTWARE · TECHNOLOGY · CREATIVE</p>
           <h1 className="text-pretty sm:text-balance text-3xl font-medium leading-tight tracking-tight text-white sm:text-5xl lg:text-5xl xl:text-6xl">

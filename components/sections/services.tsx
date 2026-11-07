@@ -155,6 +155,8 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Reveal from "@/components/reveal";
 import { services } from "@/lib/services";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 
 
 const AUTOPLAY_MS = 4000;
@@ -191,7 +193,7 @@ export default function Services() {
       {/* keyframes for the autoplay progress bar */}
       <style>{`@keyframes svc-progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }`}</style>
 
-      <div className="mx-auto max-w-[1200px]">
+      <div className="mx-auto max-w-[1300px]">
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="mb-3 text-sm font-medium uppercase tracking-[0.05em] text-arc">Services</p>
           <h2 className="text-3xl font-light tracking-tight md:text-5xl">
@@ -211,7 +213,7 @@ export default function Services() {
             <div className="flex flex-col gap-2 sm:gap-3 lg:h-[30rem] lg:flex-row">
               {services.map((s, i) => {
                 const on = i === open;
-                const num = String(i + 1).padStart(3, "0");
+                const num = String(i + 1).padStart(2, "0");
 
                 return (
                   <div
@@ -223,24 +225,27 @@ export default function Services() {
                   >
                     {/* Collapsed state */}
                     <button
-                      type="button"
-                      aria-expanded={on}
-                      tabIndex={on ? -1 : 0}
-                      onClick={() => {
-                        setAutoplay(false); // user took control, stop cycling
-                        setOpen(i);
-                      }}
-                      className={`absolute inset-0 z-10 flex items-center gap-3 px-3 text-left transition duration-500 hover:bg-white/5 lg:flex-col lg:items-center lg:justify-between lg:px-0 lg:py-8 ${
-                        on ? "pointer-events-none opacity-0" : "opacity-100 delay-300"
-                      }`}
-                    >
-                      <span className="rounded-full border border-white/15 px-3 py-1 font-mono text-xs text-neutral-300 transition duration-300 group-hover:border-arc group-hover:text-arc">
-                        {num}
-                      </span>
-                      <span className="text-base font-medium transition duration-300 group-hover:text-arc lg:rotate-180 lg:text-lg lg:[writing-mode:vertical-rl]">
-                        {s.title}
-                      </span>
-                    </button>
+  type="button"
+  aria-expanded={on}
+  tabIndex={on ? -1 : 0}
+  onClick={() => {
+    setAutoplay(false); // keep whatever your onClick does today
+    setOpen(i);
+  }}
+  className={`absolute inset-0 z-10 flex items-center justify-between gap-3 px-4 text-left transition duration-500 hover:bg-white/5 lg:flex-col lg:px-0 lg:py-8 ${
+    on ? "pointer-events-none opacity-0" : "opacity-100 delay-300"
+  }`}
+>
+  {/* title first: top of the card on desktop, left on mobile */}
+  <span className="text-base font-medium transition duration-300 group-hover:text-arc lg:rotate-180 lg:text-lg lg:[writing-mode:vertical-rl]">
+    {s.title}
+  </span>
+
+  {/* number second: bottom of the card on desktop, right on mobile */}
+  <span className="rounded-full border border-white/15 px-3 py-1 font-mono text-xs text-neutral-300 transition duration-300 group-hover:border-arc group-hover:text-arc">
+    {num}
+  </span>
+</button>
 
                     {/* Expanded state */}
                     <div
@@ -272,6 +277,14 @@ export default function Services() {
                             {s.short}
                           </p>
                         </div>
+
+                        <Link
+                          href={`/services/${s.slug}`}
+                          tabIndex={on ? 0 : -1}
+                          className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-arc sm:mt-4"
+                        >
+                          Learn more <ArrowUpRight className="size-4" />
+                        </Link>
 
                         <div className="hidden sm:block">
                           <p
