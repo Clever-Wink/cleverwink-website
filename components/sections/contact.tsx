@@ -53,7 +53,7 @@
 import { useState } from "react";
 import { services } from "@/lib/services";
 import Reveal from "../reveal";
-
+import { sendGAEvent } from "@next/third-parties/google";
 
 const CONTACT_EMAIL = "info@cleverwink.ae";
 const field =
@@ -78,6 +78,10 @@ export default function Contact({ defaultService = "" }: { defaultService?: stri
       });
       const data = await res.json().catch(() => ({}));
       if (!res.ok) throw new Error(data.error || "Something went wrong.");
+      sendGAEvent("event", "generate_lead", {
+        form: "contact",
+        service: defaultService || "general",
+      });
       setStatus("sent");
     } catch (err) {
       setError(err instanceof Error ? err.message : `Something went wrong. Please email ${CONTACT_EMAIL}.`);
