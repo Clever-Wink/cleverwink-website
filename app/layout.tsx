@@ -26,6 +26,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter, IBM_Plex_Mono,Geist } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
@@ -85,6 +86,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
         {children}</body>
+        {process.env.NEXT_PUBLIC_GA_ID && (
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
+        )}
     </html>
   );
 }
