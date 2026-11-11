@@ -256,34 +256,111 @@ export function Navbar() {
   );
 }
 
+
+import { MapPin, Mail } from "lucide-react";
+
+// Keep your existing links and socials arrays.
+
+const serviceLinks = [
+  { label: "ERP Solutions", href: "/services/erp" },
+  { label: "CRM Solutions", href: "/services/crm" },
+  { label: "HRMS Solutions", href: "/services/hrms" },
+  { label: "Digital Marketing", href: "/services/digital-marketing" },
+  { label: "Web Design", href: "/services/web-design" },
+  { label: "Design & Creative", href: "/services/design-creative" },
+];
+
 export function Footer() {
   return (
     <footer className="border-t border-white/10 px-6 pb-10 pt-16">
-      <div className="mx-auto grid max-w-[1350px] gap-10 md:grid-cols-[2fr_1fr_1fr]">
+      <div className="mx-auto grid max-w-[1350px] gap-10 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1.3fr_1.3fr]">
+
+        {/* Company */}
         <div>
-          <Image src="/clever-wink-logo.webp" alt="CLEVER WINK" width={5413} height={1245} className="h-10 w-auto md:h-12" />
-          <p className="mt-3 max-w-xs text-sm text-mist">Automation that handles the repetitive work, in a wink.</p>
+          <Image
+            src="/clever-wink-logo.webp"
+            alt="CLEVER WINK - Business Solutions UAE"
+            width={5413}
+            height={1245}
+            className="h-10 w-auto md:h-12"
+          />
+
+          <p className="mt-3 max-w-xs text-sm text-mist">
+            Automation that handles the repetitive work, in a wink.
+          </p>
         </div>
-<div>
-  <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-fog">Explore</p>
-  <ul className="mt-4 space-y-2 text-sm text-mist">
-    {links.map(([l, h]) => (
-      <li key={h}>
-        <a href={h} className="hover:text-white">{l}</a>
-      </li>
-    ))}
-    <li>
-      <Link href="/careers" className="hover:text-white">Careers</Link>
-    </li>
-  </ul>
-</div>
+
+        {/* Explore */}
         <div>
-          <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-fog">Contact</p>
+          <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-arc">
+            Explore
+          </p>
+
           <ul className="mt-4 space-y-2 text-sm text-mist">
-            <li>Sharjah Media City<br />Sharjah, UAE</li>
-            <li><a href="mailto:info@cleverwink.ae" className="hover:text-white">info@cleverwink.ae</a></li>
-            {/* <li><a href="tel:+000000000000" className="hover:text-white">+00 000 000 0000</a></li> */}
+            {links.map(([label, href]) => (
+              <li key={href}>
+                <a href={href} className="transition hover:text-white">
+                  {label}
+                </a>
+              </li>
+            ))}
+
+            <li>
+              <Link href="/careers" className="transition hover:text-white">
+                Careers
+              </Link>
+            </li>
           </ul>
+        </div>
+
+        {/* Services */}
+        <div>
+          <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-arc">
+            Services
+          </p>
+
+          <ul className="mt-4 space-y-2 text-sm text-mist">
+            {serviceLinks.map((service) => (
+              <li key={service.href}>
+                <Link
+                  href={service.href}
+                  className="transition hover:text-white"
+                >
+                  {service.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Contact */}
+        <div>
+          <p className="font-mono text-[11px] uppercase tracking-[0.08em] text-arc">
+            Contact
+          </p>
+
+          <ul className="mt-4 space-y-4 text-sm text-mist">
+            <li className="flex items-start gap-3">
+              <MapPin className="mt-0.5 size-4 shrink-0 text-fog" />
+              <span>
+                Sharjah Media City
+                <br />
+                Sharjah, UAE
+              </span>
+            </li>
+
+            <li className="flex items-center gap-3">
+              <Mail className="size-4 shrink-0 text-fog" />
+              <a
+                href="mailto:info@cleverwink.ae"
+                className="transition hover:text-white"
+              >
+                info@cleverwink.ae
+              </a>
+            </li>
+          </ul>
+
+          {/* Social Links */}
           <div className="mt-6 flex gap-3">
             {socials.map(({ name, icon: Icon, href }) => (
               <a
@@ -300,11 +377,23 @@ export function Footer() {
           </div>
         </div>
       </div>
+
+      {/* Copyright */}
       <div className="mx-auto mt-12 flex max-w-[1350px] flex-col gap-3 border-t border-white/10 pt-6 text-xs text-fog sm:flex-row sm:items-center sm:justify-between">
         <p>© 2026 CLEVER WINK. All rights reserved.</p>
+
         <ul className="flex gap-5">
-          <li><Link href="/privacy-policy" className="hover:text-white">Privacy Policy</Link></li>
-          <li><Link href="/terms-of-service" className="hover:text-white">Terms of Service</Link></li>
+          <li>
+            <Link href="/privacy-policy" className="hover:text-white">
+              Privacy Policy
+            </Link>
+          </li>
+
+          <li>
+            <Link href="/terms-of-service" className="hover:text-white">
+              Terms of Service
+            </Link>
+          </li>
         </ul>
       </div>
     </footer>

@@ -47,9 +47,9 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 
-// Paths of your files inside public/. Spelling and capital letters must match exactly.
+// Paths of your files inside public/ Spelling and capital letters must match exactly.
 const VIDEO = { wide: "/hero/Hero_Video_Web.mp4", tall: "/hero/Hero_Video_Mobile.mp4" };
-const POSTER = { wide: "/hero/Video_Web_Img.jpg", tall: "/hero/Video_Mobile_Img.jpg" };
+// const POSTER = { wide: "/hero/Video_Web_Img.jpg", tall: "/hero/Video_Mobile_Img.png" };
 
 // Invisible until its first frame is ready, then fades in over the image
 function Clip({ src }: { src: string }) {
@@ -95,10 +95,10 @@ export default function HeroVideo() {
 
   return (
     <div aria-hidden className="absolute inset-0 bg-ink">
-      <picture>
+      {/* <picture>
         <source media="(orientation: portrait)" srcSet={POSTER.tall} />
         <img src={POSTER.wide} alt="" className="absolute inset-0 h-full w-full object-cover object-center" />
-      </picture>
+      </picture> */}
       {which && <Clip key={which} src={VIDEO[which]} />}
     </div>
   );
