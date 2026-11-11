@@ -35,7 +35,7 @@ const plex = IBM_Plex_Mono({ subsets: ["latin"], weight: "400", variable: "--fon
 
 const title = "CLEVER WINK | Business Automation & Digital Marketing UAE";
 const description =
-    "Clever Wink provides ERP, CRM and HRMS solutions, website development, business automation and digital marketing services in the UAE. Practical technology that makes business easierClever Wink delivers ERP, CRM and HRMS solutions, website development and business automation services for businesses across the UAE.";  
+    "Clever Wink delivers ERP, CRM and HRMS solutions, website development and business automation services for businesses across the UAE.";  
     
   export const metadata: Metadata = {
     metadataBase: new URL("https://cleverwink.ae"),
